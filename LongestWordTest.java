@@ -1,36 +1,21 @@
-import static org.junit.jupiter.api.Assertions.*;
 
+import org.junit.Assert;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import junit.framework.Assert;
 
-/**
- * 
- */
-
-/**
- * @author sande
- *
- */
 class LongestWordTest {
 
 	LongestWord obj;
-	/**
-	 * @throws java.lang.Exception
-	 */
 	@BeforeEach
 	void setUp() throws Exception {
 		 obj = new LongestWord();
 	}
 
-	/**
-	 * Test method for {@link LongestWord#getLongestWord(java.lang.String)}.
-	 */
-	@SuppressWarnings("deprecation")
 	@Test
 	void testGetLongestWord() {
-		Assert.assertEquals("7 an Sandeep", obj.getLongestWord("Sandeep Pathak"));
+		Assert.assertEquals("6 and jumped", obj.getLongestWord("The cow jumped over the moon"));
+		Assert.assertEquals("4 and moon", obj.getLongestWord("The cow over the moon"));
 	}
 
 }
